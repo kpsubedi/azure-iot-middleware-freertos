@@ -100,7 +100,8 @@ jobs:
                            export ADU_AAD_APPLICATION_SECRET="${{ secrets.ADU_AAD_APPLICATION_SECRET }}";
                            export ADU_IOTHUB_CONNECTION_STRING="${{ secrets.ADU_IOTHUB_CONNECTION_STRING }}";
                            .github/scripts/e2e_tests.sh;
-                           echo $IOTHUB_CONNECTION_STRING'
+                           echo $IOTHUB_CONNECTION_STRING;
+                           echo "TESTING" '
         if: >-
           (
             github.event_name == 'pull_request' &&
