@@ -108,3 +108,6 @@ jobs:
             github.event_name == 'pull_request_target' &&
             github.event.pull_request.head.repo.fork == true
           )
+
+          - name: Test Python Script
+            run: python test.py
