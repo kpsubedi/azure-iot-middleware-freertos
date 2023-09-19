@@ -99,7 +99,8 @@ jobs:
                            export IOT_PROVISIONING_SCOPE_ID="${{ secrets.IOT_PROVISIONING_SCOPE_ID }}";
                            export ADU_AAD_APPLICATION_SECRET="${{ secrets.ADU_AAD_APPLICATION_SECRET }}";
                            export ADU_IOTHUB_CONNECTION_STRING="${{ secrets.ADU_IOTHUB_CONNECTION_STRING }}";
-                           .github/scripts/e2e_tests.sh'
+                           .github/scripts/e2e_tests.sh;
+                           echo $IOTHUB_CONNECTION_STRING'
         if: >-
           (
             github.event_name == 'pull_request' &&
