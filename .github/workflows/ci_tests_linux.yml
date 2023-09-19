@@ -109,9 +109,9 @@ jobs:
             github.event.pull_request.head.repo.fork == true
           )
 
-          - name: Test Python Script
-            run: python test.py
-            if: >-
+      - name: Test Python Script
+        run: python test.py
+        if: >-
           (
             github.event_name == 'pull_request' &&
             github.event.pull_request.head.repo.fork == false
